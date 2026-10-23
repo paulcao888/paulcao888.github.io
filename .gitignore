@@ -5,3 +5,6 @@ node_modules/
 .preview/
 .qa/
 *.log
+
+# Separate local repositories; never publish them with the website.
+.workspace/

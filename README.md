@@ -10,7 +10,7 @@ A personal website about practical AI experiments and language-learning tools.
 - [WordUp](https://github.com/paulcao888/wordup) — an editorial vocabulary-learning web app with spaced repetition.
 - [FluentPal product concept](https://github.com/paulcao888/everyone-speak-English) — a companion landing-page exploration.
 
-The open-source exploration section credits the original projects. Portfolio previews are illustrative interface studies, not screenshots or claims of measured results.
+The public-project exploration section credits the original projects. Portfolio previews are illustrative interface studies, not screenshots or claims of measured results.
 
 ## Edit the site
 
