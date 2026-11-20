@@ -2203,3 +2203,481 @@ summary {
   min-height:36px
 }
 
+/* ==========================================================================
+   ePortfolio page (eportfolio.html)
+   New styles only — keeps the shared paper / ink / blue system above.
+   ========================================================================== */
+
+.eportfolio-page {
+  scroll-padding-top: 120px;
+}
+
+.site-header nav a[aria-current="page"] {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.ep-anchor-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 92%, #fff);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
+.ep-anchor-nav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: center;
+  min-height: 48px;
+  padding-block: 8px;
+  font-size: 12px;
+  font-weight: 550;
+}
+
+.ep-anchor-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 6px 8px;
+}
+
+.ep-anchor-nav a:hover,
+.ep-anchor-nav a:focus-visible {
+  color: var(--blue);
+}
+
+.ep-hero {
+  padding: 72px 0 64px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.ep-hero .eyebrow {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ep-hero h1 {
+  font-size: clamp(42px, 5.4vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  max-width: 560px;
+}
+
+.ep-hero h1 > span {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.ep-tagline {
+  max-width: 460px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 22px;
+}
+
+.ep-photo-placeholder {
+  margin: 0;
+  justify-self: end;
+  width: min(100%, 340px);
+}
+
+.ep-photo-frame {
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background:
+    linear-gradient(160deg, #e8ecff 0%, #edeee6 48%, #e4e9d8 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ep-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#d7dcd155 1px, transparent 1px),
+    linear-gradient(90deg, #d7dcd155 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+}
+
+.ep-photo-mark {
+  position: relative;
+  z-index: 1;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 34px var(--serif);
+  letter-spacing: -0.06em;
+}
+
+.ep-photo-label {
+  position: relative;
+  z-index: 1;
+  font-family: var(--heading);
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  background: #fffcf4;
+  border: 1px dashed #9aa48c;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+.ep-photo-placeholder figcaption {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.ep-focus-strip {
+  border-block: 1px solid var(--line);
+}
+
+.ep-focus-strip .wrap {
+  display: flex;
+  gap: 36px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 64px;
+  font-size: 12px;
+}
+
+.ep-focus-strip span:first-child {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.ep-focus-strip i {
+  color: var(--blue);
+  font-style: normal;
+  font-size: 17px;
+}
+
+.ep-section {
+  padding: 78px 0;
+}
+
+.ep-section-alt {
+  background: #ecede4;
+  border-block: 1px solid var(--line);
+  padding: 78px 0;
+}
+
+.ep-section-muted {
+  background: #f1f2eb;
+  border-block: 1px solid var(--line);
+  padding: 78px 0;
+}
+
+.ep-section-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.ep-section.wrap {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.ep-section-label h2 {
+  margin-top: 14px;
+}
+
+.ep-section-body > p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 640px;
+}
+
+.ep-section-body > p + p {
+  margin-top: 16px;
+}
+
+.ep-card {
+  background: #fbfaf6;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 28px 30px;
+}
+
+.ep-card + .ep-card {
+  margin-top: 18px;
+}
+
+.ep-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.ep-card-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-weight: 650;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ep-card .tag {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: #5d645b;
+  background: #eeefe7;
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+.ep-card h3 {
+  font-size: 24px;
+  letter-spacing: -0.03em;
+}
+
+.ep-card-org {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ep-card > p:last-child {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.ep-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  padding-left: 8px;
+}
+
+.ep-timeline-item {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.ep-timeline-marker {
+  width: 12px;
+  height: 12px;
+  margin-top: 34px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px #e4e7f1;
+}
+
+.ep-skills-note {
+  margin-bottom: 28px !important;
+}
+
+.ep-placeholder-inline {
+  display: inline;
+  font-family: var(--heading);
+  font-weight: 650;
+  color: var(--ink);
+  background: #fff6d8;
+  border-bottom: 2px solid #c4a035;
+  padding: 0 4px;
+}
+
+.ep-skills-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ep-skills-grid li {
+  background: #fbfaf6;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 22px 22px 20px;
+}
+
+.ep-skills-grid h3 {
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.ep-skills-grid p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.ep-project-grid {
+  margin-top: 36px;
+}
+
+#projects.ep-section.wrap,
+.ep-section#projects {
+  display: block;
+}
+
+.eportfolio-page #projects {
+  display: block;
+  padding-top: 78px;
+  padding-bottom: 40px;
+}
+
+.eportfolio-page #projects .section-heading {
+  margin-bottom: 0;
+}
+
+.eportfolio-page #contact {
+  margin-top: 24px;
+}
+
+@media (max-width: 1100px) {
+  .ep-hero {
+    gap: 36px;
+    padding-block: 56px;
+  }
+
+  .ep-section.wrap,
+  .ep-section-inner {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ep-hero {
+    grid-template-columns: 1fr;
+    padding-block: 48px;
+  }
+
+  .ep-photo-placeholder {
+    justify-self: start;
+    width: min(100%, 280px);
+  }
+
+  .ep-section.wrap,
+  .ep-section-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .ep-section,
+  .ep-section-alt,
+  .ep-section-muted {
+    padding-block: 56px;
+  }
+
+  .ep-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ep-focus-strip .wrap {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-block: 14px;
+  }
+
+  .ep-anchor-nav-inner {
+    gap: 8px 16px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ep-hero h1 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .ep-tagline {
+    font-size: 15px;
+  }
+
+  .ep-photo-placeholder {
+    width: 100%;
+  }
+
+  .ep-card {
+    padding: 22px;
+  }
+
+  .ep-card h3 {
+    font-size: 20px;
+  }
+
+  .ep-timeline-item {
+    grid-template-columns: 12px 1fr;
+    gap: 12px;
+  }
+
+  .ep-timeline-marker {
+    margin-top: 28px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .ep-focus-strip .wrap {
+    font-size: 11px;
+  }
+
+  .ep-focus-strip span:first-child {
+    width: 100%;
+  }
+
+  .ep-anchor-nav-inner {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .ep-anchor-nav a {
+    white-space: nowrap;
+  }
+}
+
+
